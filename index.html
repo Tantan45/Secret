@@ -8,7 +8,7 @@
   <meta name="description" content="A little birthday magic, a floating cake, and a whole lot of love. This one's for you, Ninya.">
   <title>Happy Birthday, Ninya! ✧</title>
   <link rel="stylesheet" href="styles.css?v=wish-photo-1">
-  <script src="script.js?v=autoplay-3" defer></script>
+  <script src="script.js?v=wish-music-4" defer></script>
 </head>
 <body>
   <div class="confetti" id="confetti" aria-hidden="true"></div>
@@ -25,7 +25,7 @@
           <h1 id="birthday-title">Happy <br>Birthday,<br><span class="name">Ninya<svg class="name-sparkle" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3c0 21-8 29-29 29 21 0 29 8 29 29 0-21 8-29 29-29C40 32 32 24 32 3Z"/></svg><span class="period">.</span></span></h1>
           <p class="birthday-description">Some people make the world feel lighter.<br>You’re one of them.</p>
           <p class="birthday-description second-line">So today, even your cake is floating.</p>
-          <button class="wish-button" id="wish-button" type="button"><span aria-hidden="true">✧</span> Make a wish <img class="button-photo" src="wish-photo.jpg" alt="" width="34" height="34"></button>
+          <button class="wish-button" id="wish-button" type="button" aria-label="Make a wish and play birthday music"><span aria-hidden="true">✧</span> Make a wish <img class="button-photo" src="wish-photo.jpg" alt="" width="34" height="34"></button>
           <p class="little-instruction">Close your eyes. Wish big. It’s your day.</p>
         </div>
 
@@ -105,7 +105,7 @@
     <footer><p>Made with love, just for Ninya <span aria-hidden="true">♡</span></p><span>YOUR NEXT CHAPTER LOOKS GOOD ON YOU.</span></footer>
   </div>
 
-  <audio id="birthday-music" src="birthday-music.mp3" preload="auto" autoplay loop></audio>
+  <audio id="birthday-music" src="birthday-music.mp3" preload="metadata" loop></audio>
 
   <dialog id="wish-dialog" aria-labelledby="wish-title" aria-describedby="wish-message">
     <button class="close-dialog" id="close-dialog" type="button" aria-label="Close birthday wish">×</button>

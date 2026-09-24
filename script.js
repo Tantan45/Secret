@@ -6,6 +6,7 @@ const confetti = document.querySelector('#confetti');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const birthdayMusic = document.querySelector('#birthday-music');
 birthdayMusic.volume = 0.45;
+let musicRequested = false;
 
 function sprinkleConfetti() {
   if (reducedMotion.matches) return;
@@ -29,6 +30,7 @@ function sprinkleConfetti() {
 }
 
 wishButton.addEventListener('click', () => {
+  musicRequested = true;
   startMusic();
   scene.classList.add('candles-out');
   dialog.showModal();
@@ -57,53 +59,28 @@ gravityButton.addEventListener('click', () => {
   document.querySelector('.cake-caption').textContent = grounded ? 'Back to earth. Still a little magical.' : '100% sweetness. 0% gravity.';
 });
 
-// Start inside a real interaction when Chrome blocks audible autoplay.
-// Capture listeners run before opening the wish dialog or other click actions.
-const musicGestures = ['click', 'touchend', 'keydown'];
-
-function waitForMusicGesture() {
-  for (const eventName of musicGestures) {
-    document.addEventListener(eventName, startMusic, { capture: true, passive: true });
-  }
-}
-
-function stopWaitingForMusicGesture() {
-  for (const eventName of musicGestures) {
-    document.removeEventListener(eventName, startMusic, true);
-  }
-}
-
+// The pictured Make a wish button starts music using the same tap.
 async function startMusic() {
-  if (document.hidden) return;
+  if (!musicRequested || document.hidden) return;
   if (!birthdayMusic.paused && birthdayMusic.readyState >= 3) return;
   try {
-    // A failed media request can otherwise leave the element unable to retry.
     if (birthdayMusic.error) birthdayMusic.load();
     birthdayMusic.muted = false;
-    // Call play synchronously, while the click still carries user activation.
+    // Keep this call synchronous with the button's click for Chrome playback.
     await birthdayMusic.play();
     if (document.hidden) birthdayMusic.pause();
   } catch (error) {
-    if (!birthdayMusic.paused) return;
-    waitForMusicGesture();
-    if (error.name !== 'NotAllowedError' && error.name !== 'AbortError') {
+    if (error.name !== 'AbortError') {
+      musicRequested = false;
       console.warn('Birthday music could not play:', error);
     }
   }
 }
 
 birthdayMusic.addEventListener('playing', () => {
-  if (document.hidden) { birthdayMusic.pause(); return; }
-  stopWaitingForMusicGesture();
-});
-birthdayMusic.addEventListener('error', () => {
-  waitForMusicGesture();
+  if (document.hidden) birthdayMusic.pause();
 });
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) birthdayMusic.pause();
-  else startMusic();
+  else if (musicRequested) startMusic();
 });
-window.addEventListener('pageshow', startMusic);
-
-waitForMusicGesture();
-startMusic();
