@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e8dcf7">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="A little birthday magic, a floating cake, and a whole lot of love. This one's for you, Ninya.">
+  <title>Happy Birthday, Ninya! ✧</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Ninya's birthday, home"><span class="logo-flower" aria-hidden="true">✳</span> a little celebration<span class="wordmark-dot">.</span></a>
+
+    </header>
+
+    <main>
+      <section class="birthday-hero" aria-labelledby="birthday-title">
+        <div class="birthday-copy">
+          <div class="eyebrow"><span></span> TODAY IS A LITTLE MORE MAGICAL</div>
+          <h1 id="birthday-title">Happy <br>Birthday,<br><span class="name">Ninya<svg class="name-sparkle" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3c0 21-8 29-29 29 21 0 29 8 29 29 0-21 8-29 29-29C40 32 32 24 32 3Z"/></svg><span class="period">.</span></span></h1>
+          <p class="birthday-description">Some people make the world feel lighter.<br>You’re one of them.</p>
+          <p class="birthday-description second-line">So today, even your cake is floating.</p>
+          <button class="wish-button" id="wish-button" type="button"><span aria-hidden="true">✧</span> Make a wish <span class="button-arrow" aria-hidden="true">↗</span></button>
+          <p class="little-instruction">Close your eyes. Wish big. It’s your day.</p>
+        </div>
+
+        <div class="cake-scene" id="cake-scene">
+          <div class="scene-glow" aria-hidden="true"></div>
+          <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="floating-label"><span class="status-dot"></span> A LITTLE LESS GRAVITY. A LOT MORE LOVE.</div>
+          <span class="scene-sparkle sparkle-one" aria-hidden="true">✧</span><span class="scene-sparkle sparkle-two" aria-hidden="true">✳</span><span class="scene-sparkle sparkle-three" aria-hidden="true">✦</span><span class="scene-sparkle sparkle-four" aria-hidden="true">✧</span>
+          <span class="tiny-heart heart-one" aria-hidden="true">♡</span><span class="tiny-heart heart-two" aria-hidden="true">♡</span>
+          <svg class="cake-art" viewBox="0 0 560 590" role="img" aria-labelledby="cake-title cake-description">
+            <title id="cake-title">A magical floating purple blueberry birthday cake</title>
+            <desc id="cake-description">Three purple cake layers float above a porcelain plate, with blueberries, lavender whipped cream, and three glowing candles.</desc>
+            <defs>
+              <linearGradient id="sponge" x1="0" y1="0" x2="0.9" y2="0.3"><stop stop-color="#a57bd3"/><stop offset=".45" stop-color="#cfb3ed"/><stop offset="1" stop-color="#8154b1"/></linearGradient>
+              <linearGradient id="icing" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7f0ff"/><stop offset="1" stop-color="#ddc7ef"/></linearGradient>
+              <linearGradient id="frosting" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c29de5"/><stop offset=".45" stop-color="#e4cef7"/><stop offset="1" stop-color="#aa80ce"/></linearGradient>
+              <radialGradient id="berry" cx=".3" cy=".25" r=".8"><stop stop-color="#9aa9df"/><stop offset=".45" stop-color="#5869a8"/><stop offset="1" stop-color="#303c70"/></radialGradient>
+              <linearGradient id="candle" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#bb7688"/><stop offset=".4" stop-color="#ebafbb"/><stop offset="1" stop-color="#d38f9f"/></linearGradient>
+              <radialGradient id="plate"><stop stop-color="#fffdf8"/><stop offset=".8" stop-color="#eee7dd"/><stop offset="1" stop-color="#d4c9bc"/></radialGradient>
+              <radialGradient id="shadow"><stop stop-color="#9b675c" stop-opacity=".2"/><stop offset="1" stop-color="#9b675c" stop-opacity="0"/></radialGradient>
+              <radialGradient id="flame-glow"><stop stop-color="#ffd69a" stop-opacity=".7"/><stop offset="1" stop-color="#ffd69a" stop-opacity="0"/></radialGradient>
+              <g id="blueberry"><ellipse cx="0" cy="10" rx="18" ry="17" fill="url(#berry)"/><ellipse cx="-7" cy="5" rx="6" ry="9" transform="rotate(32 -7 5)" fill="#d5def6" opacity=".22"/><ellipse cx="3" cy="0" rx="7" ry="5" fill="#495783"/><path d="m3-5 2 3 5-1-3 4 2 4-5-2-3 3-1-4-4-2 5-2Z" fill="#26345b"/><ellipse cx="3" cy="0" rx="2" ry="1.4" fill="#8593c2"/></g>
+              <g id="cream"><path d="M-17 5C-20-2-10-6-10-11-11-17 1-20 2-27 11-17 5-13 12-9 24-1 20 7 10 10-1 14-16 12-17 5Z" fill="url(#icing)"/><path d="M2-22C8-9-7-6-6 7M8-12C15-2 4 1 5 10" fill="none" stroke="#cbb0e3" stroke-width="1.5"/></g>
+            </defs>
+            <ellipse class="ground-shadow" cx="284" cy="535" rx="191" ry="34" fill="url(#shadow)"/>
+            <g class="cake-plate"><ellipse cx="280" cy="494" rx="180" ry="40" fill="#cbbcae"/><path d="M100 486v8c0 24 81 42 180 42s180-18 180-42v-8" fill="#e6ddd1"/><ellipse cx="280" cy="486" rx="180" ry="41" fill="url(#plate)"/><ellipse cx="280" cy="483" rx="156" ry="31" fill="none" stroke="#dcd1c4"/><ellipse cx="280" cy="483" rx="137" ry="26" fill="#f5eee4"/></g>
+
+            <g class="cake-layer layer-bottom">
+              <ellipse cx="280" cy="432" rx="133" ry="34" fill="#8056a7" opacity=".15"/>
+              <path d="M147 376v48c0 43 266 43 266 0v-48Z" fill="url(#sponge)"/>
+              <path d="M147 396c49 40 212 40 266 0v12c-54 40-217 40-266 0Z" fill="#eee0fa"/>
+              <path d="M147 415c52 41 213 41 266 0" fill="none" stroke="#976bbd" stroke-width="2" opacity=".4"/>
+              <ellipse cx="280" cy="376" rx="133" ry="35" fill="url(#frosting)"/>
+              <path d="M147 375c0 22 58 36 133 36s133-14 133-36v13c-4 15-15 4-22 13-8 13-18 6-22 8-12 3-7 24-19 24-14 0-8-20-23-18-14 2-8 10-23 10-12 0-13-9-25-8-16 0-14 19-26 18-13-1-6-19-21-20-18-1-11 12-24 9-11-3-7-18-20-20-12-2-8 9-19 3-10-5-12-11-22-14Z" fill="url(#icing)"/>
+              <ellipse cx="280" cy="373" rx="129" ry="32" fill="#edddfa"/>
+              <g fill="#8055a6" opacity=".45"><circle cx="178" cy="419" r="1.7"/><circle cx="193" cy="432" r="1.4"/><circle cx="232" cy="441" r="1.7"/><circle cx="308" cy="447" r="1.4"/><circle cx="364" cy="431" r="1.7"/><circle cx="386" cy="415" r="1.4"/></g>
+            </g>
+
+            <g class="cake-layer layer-middle">
+              <path d="M166 278v45c0 40 228 40 228 0v-45Z" fill="url(#sponge)"/>
+              <path d="M166 298c42 35 185 35 228 0v12c-45 35-187 35-228 0Z" fill="#eee0fa"/>
+              <ellipse cx="280" cy="278" rx="114" ry="31" fill="url(#frosting)"/>
+              <path d="M166 277c0 19 50 32 114 32s114-13 114-32v12c-9 17-18 0-26 12-10 17-14 6-23 10-13 4-6 24-19 24-12 0-8-20-21-19-14 1-10 9-24 9-16 0-13-11-28-11-10 0-11 18-21 16-14-2-7-20-20-23-15-3-12 7-23 3-10-3-9-13-23-17Z" fill="url(#icing)"/>
+              <ellipse cx="280" cy="276" rx="110" ry="28" fill="#edddfa"/>
+              <g fill="#8055a6" opacity=".5"><circle cx="183" cy="321" r="1.5"/><circle cx="217" cy="333" r="1.5"/><circle cx="267" cy="343" r="1.7"/><circle cx="310" cy="338" r="1.5"/><circle cx="356" cy="328" r="1.8"/></g>
+            </g>
+
+            <g class="cake-layer layer-top">
+              <path d="M188 183v44c0 34 184 34 184 0v-44Z" fill="url(#sponge)"/>
+              <path d="M188 207c38 29 146 29 184 0v10c-38 29-146 29-184 0Z" fill="#eee0fa"/>
+              <ellipse cx="280" cy="183" rx="92" ry="27" fill="url(#frosting)"/>
+              <path d="M188 182c0 17 41 28 92 28s92-11 92-28v13c-6 12-15 1-22 11-9 13-16 3-22 8-7 5-5 21-15 21-13 0-5-19-19-18-13 1-12 8-23 7-13 0-9-10-20-10-10-1-10 15-20 12-10-2-4-16-16-20-12-3-16 2-27-11Z" fill="url(#icing)"/>
+              <ellipse cx="280" cy="181" rx="89" ry="25" fill="#edddfa"/>
+              <use href="#cream" transform="translate(215 179) scale(.72)"/><use href="#cream" transform="translate(343 179) scale(.72)"/>
+              <use href="#blueberry" transform="translate(236 169) rotate(-17) scale(.65)"/><use href="#blueberry" transform="translate(320 174) rotate(18) scale(.68)"/>
+              <use href="#cream" transform="translate(280 194) scale(.8)"/>
+              <g class="candles">
+                <g transform="translate(256 0)"><rect x="-4" y="119" width="8" height="59" rx="3" fill="url(#candle)"/><path d="m-4 133 8-5m-8 19 8-5m-8 19 8-5m-8 19 8-5" stroke="#fff1dd" stroke-width="2.5"/><path d="M0 119v-6" stroke="#7e5c4b" stroke-width="1.6"/><g class="flame flame-one"><ellipse cx="0" cy="104" rx="19" ry="23" fill="url(#flame-glow)"/><path d="M0 87C-2 96-9 102-6 109c3 7 12 5 12-2C6 101 1 96 0 87Z" fill="#f6b45c"/><path d="M0 100c-6 11-1 16 3 10 1-4-2-7-3-10Z" fill="#fff6c3"/></g></g>
+                <g transform="translate(281 -13)"><rect x="-4" y="119" width="8" height="59" rx="3" fill="url(#candle)"/><path d="m-4 133 8-5m-8 19 8-5m-8 19 8-5m-8 19 8-5" stroke="#fff1dd" stroke-width="2.5"/><path d="M0 119v-6" stroke="#7e5c4b" stroke-width="1.6"/><g class="flame flame-two"><ellipse cx="0" cy="104" rx="19" ry="23" fill="url(#flame-glow)"/><path d="M0 87C-2 96-9 102-6 109c3 7 12 5 12-2C6 101 1 96 0 87Z" fill="#f6b45c"/><path d="M0 100c-6 11-1 16 3 10 1-4-2-7-3-10Z" fill="#fff6c3"/></g></g>
+                <g transform="translate(305 0)"><rect x="-4" y="119" width="8" height="59" rx="3" fill="url(#candle)"/><path d="m-4 133 8-5m-8 19 8-5m-8 19 8-5m-8 19 8-5" stroke="#fff1dd" stroke-width="2.5"/><path d="M0 119v-6" stroke="#7e5c4b" stroke-width="1.6"/><g class="flame flame-three"><ellipse cx="0" cy="104" rx="19" ry="23" fill="url(#flame-glow)"/><path d="M0 87C-2 96-9 102-6 109c3 7 12 5 12-2C6 101 1 96 0 87Z" fill="#f6b45c"/><path d="M0 100c-6 11-1 16 3 10 1-4-2-7-3-10Z" fill="#fff6c3"/></g></g>
+              </g>
+            </g>
+            <g class="floating-berry berry-left"><use href="#blueberry" transform="translate(132 290) rotate(-32) scale(.85)"/></g>
+            <g class="floating-berry berry-right"><use href="#blueberry" transform="translate(427 215) rotate(24) scale(.72)"/></g>
+            <g class="floating-crumbs" fill="#a681c8"><rect x="144" y="231" width="5" height="9" rx="2" transform="rotate(-25 144 231)"/><rect x="412" y="355" width="5" height="9" rx="2" transform="rotate(30 412 355)"/><circle cx="171" cy="347" r="3"/><circle cx="384" cy="267" r="3"/></g>
+          </svg>
+          <div class="handwritten-note">a cake as sweet as you <svg viewBox="0 0 60 45" fill="none" aria-hidden="true"><path d="M4 5c38-9 56 16 25 33m-1-12-1 14 15-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <button class="gravity-button" id="gravity-button" type="button" aria-pressed="true"><span class="gravity-icon" aria-hidden="true">↟</span><span>Gravity: off</span><span class="toggle-track" aria-hidden="true"><span></span></span></button>
+          <p class="cake-caption">100% sweetness. 0% gravity.</p>
+        </div>
+      </section>
+
+      <section class="birthday-wishes" aria-label="A few birthday wishes for you">
+        <p><span aria-hidden="true">✧</span> A little more wonder.</p><span class="wish-divider" aria-hidden="true"></span><p><span aria-hidden="true">♡</span> A whole lot of happiness.</p><span class="wish-divider" aria-hidden="true"></span><p><span aria-hidden="true">☼</span> A year that feels like you.</p>
+      </section>
+    </main>
+    <footer><p>Made with love, just for Ninya <span aria-hidden="true">♡</span></p><span>YOUR NEXT CHAPTER LOOKS GOOD ON YOU.</span></footer>
+  </div>
+
+  <audio id="birthday-music" src="assets/birthday-music.mp3" preload="auto" autoplay loop></audio>
+
+  <dialog id="wish-dialog" aria-labelledby="wish-title" aria-describedby="wish-message">
+    <button class="close-dialog" id="close-dialog" type="button" aria-label="Close birthday wish">×</button>
+    <span class="dialog-sparkle" aria-hidden="true">✧</span>
+    <p class="dialog-eyebrow">ONE WISH. ENDLESS POSSIBILITIES.</p>
+    <h2 id="wish-title">Here’s to you,<br><em>Ninya.</em></h2>
+    <p id="wish-message">May this next trip around the sun bring you unexpected joy, beautiful little moments, and all the love your heart can hold.</p>
+    <p class="dialog-signoff">The world is sweeter with you in it.<br>Happy Birthday, Queennie Pearl! ♡</p>
+    <button class="wish-button celebrate-again" id="celebrate-again" type="button">A little more magic <span aria-hidden="true">✧</span></button>
+  </dialog>
+</body>
+</html>
